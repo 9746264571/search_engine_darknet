@@ -49,4 +49,8 @@ Mongodb
     sudo python3 elas.py
 
 
+### Note
+
+Create a folder named templates on the same directory and copy the files db.html and 
+
 
