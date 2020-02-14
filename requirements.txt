@@ -1,0 +1,8 @@
+PySocks
+pika
+Werkzeug
+Flask
+xlrd
+elasticsearch
+BeautifulSoup
+pymongo
