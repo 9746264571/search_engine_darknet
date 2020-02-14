@@ -51,6 +51,6 @@ Mongodb
 
 ### Note
 
-Create a folder named templates on the same directory and copy the files db.html and 
+Create a folder named templates on the same directory and copy the files db.html and main.html
 
 
