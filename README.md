@@ -1,10 +1,10 @@
 # Customized Search Engine for Darknet Analysis
-# Ramachandran A
-# Kerala Police Cyberdome
+## Ramachandran A
+## Kerala Police Cyberdome
 
 
 
-# Packages required
+## Packages required
 
 PySocks
 pika
@@ -16,7 +16,7 @@ BeautifulSoup
 pymongo
 
 
-# Dependencies
+## Dependencies
 
 Linux
 Python 3.x
@@ -25,13 +25,13 @@ Tor CLI
 Elasticsearch
 Mongodb
 
-### Install these packages seperately ###
+[Note: Install these packages seperately. They are not included in requirements.txt]
 
-# Install the packages
+### Install the packages ###
 
     sudo pip3 install -r install requirements.txt
     
-
+### Start the services ###
     
     
     sudo service mongod start
@@ -40,6 +40,9 @@ Mongodb
     
     sudo service tor start
     
+    
+### Execute the program ###
+
     sudo python3 tor.py
     
     sudo python3 elas.py
