@@ -1,22 +1,37 @@
-# search_engine_darknet is the project developed by Ramachandran A for Kerala Police Cyberdome for Darknet Monitoring and Analysis.
-# requires python3 .....  pip3
-# required packages and dependencies .... mongodb,tor,elasticsearch,flask
-# runs on linux
+# Customized Search Engine for Darknet Analysis
+# Ramachandran A
+# Kerala Police Cyberdome
 
 
 
+# Packages required
 
-######################## Usage #############################
+PySocks
+pika
+Werkzeug
+Flask
+xlrd
+elasticsearch
+BeautifulSoup
+pymongo
+
+
+# Dependencies
+
+Linux
+Python 3.x
+pip3
+Tor CLI
+Elasticsearch
+Mongodb
+
+### Install these packages seperately ###
+
+# Install the packages
 
     sudo pip3 install -r install requirements.txt
     
-    
-    xargs -rxa dependencies.txt -- sudo apt-get install --
-    
-    
-    
-    
-    clone the repository and save in the directory /usr/bin
+
     
     
     sudo service mongod start
