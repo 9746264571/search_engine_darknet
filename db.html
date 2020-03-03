@@ -1,0 +1,67 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style>
+.box {
+  overflow: scroll;
+  width: auto;
+  height:400px;
+  border:none;
+  background:black;
+}
+.del {
+   padding-left:600px;
+   padding-top:10px;
+ 
+}
+.frm1 {
+  width: 300px;
+
+}
+</style>
+<meta http-equiv="refresh" content="25">
+</head>
+ <body>
+   <img style="padding-top:10px;padding-left:10px" src="/static/cyberdome_logo.png" /><br><br>
+   <hr/>
+   <center>|<a href="http://localhost:5000/" >Home</a>|</center>
+   <form action="http://localhost:5000/dbres" method="post">
+     <input style="padding-left:20px" type="text" name="link" required="true" />
+
+     <select name="sel">
+       <option value="in">Add Link</option>
+       <option value="del">Delete Link</option>
+     </select>
+     <input type="submit" value="Execute" />
+    </form>
+    <form action="http://localhost:5000/upload" method = "POST" enctype = "multipart/form-data">
+    <input type="file" name="file" />
+    <input type="submit" value="Upload" />
+    <div class="container">
+    {% with messages = get_flashed_messages() %}
+     {% if messages %}
+       {% for message in messages %}
+       <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>{{message}}</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+       {% endfor %}
+     {% endif %}
+    {% endwith %}
+    </div>
+   <main>
+   {% block main %}{% endblock %}
+   </main>
+   <center> <h6 style="padding-left:10px"><b>{{ count }} links available</b></h6></center>
+    <div class="box">
+    {% for val in llist %}
+      <a style="padding-left:10px" href={{val}}>{{val}}</a><br><hr style="color:orange" />
+    {% endfor %}
+    </div>
+</body>
+</html>
